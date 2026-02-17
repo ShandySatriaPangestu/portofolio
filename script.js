@@ -1,7 +1,7 @@
 let p = 0; // index project saat ini
 
 const projects = [
-  { title: "Deteksi Perilaku Berisiko pada Pengemudi Roda Empat Menggunakan YOLO (You Only Look Once) v10 untuk Meningkatkan Keamanan Berkendara", pdf: "assets/pdf/server-room-monitoring.pdf" },
+  { title: "Deteksi Perilaku Berisiko pada Pengemudi Roda Empat Menggunakan YOLO (You Only Look Once) v10 untuk Meningkatkan Keamanan Berkendara", pdf: "portofolio/project/skripsi.pdf" },
   { title: "SIMRS Backup System", pdf: "PORTOFOLIO/project/skripsi.pdf" },
   { title: "Network Redesign", pdf: "assets/pdf/network-redesign.pdf" },
   { title: "Telegram Alert System", pdf: "assets/pdf/telegram-alert-system.pdf" },
@@ -44,3 +44,4 @@ function slideProject(n) {
 document.addEventListener("DOMContentLoaded", function () {
   slideProject(0);
 });
+
