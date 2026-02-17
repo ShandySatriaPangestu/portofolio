@@ -421,11 +421,11 @@ nav a:hover::after {
   color: #ffffff;
   border: 1px solid rgba(255,255,255,0.08);
   transition: all 0.3s ease;
-  z-index: 10;
+  z-index: 100;
 }
 
-#projects .prev { left: 10px; }
-#projects .next { right: 10px; }
+#projects .prev { left: -10px; }
+#projects .next { right: -10px; }
 
 #projects .nav:hover {
   background: #8b5cf6;
@@ -546,5 +546,6 @@ footer {
   #projects .prev { left: 5px; }
   #projects .next { right: 5px; }
 }
+
 
 
