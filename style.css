@@ -322,6 +322,9 @@ nav a:hover::after {
 /* ================================================= */
 /* PROJECTS SECTION */
 /* ================================================= */
+#projects {
+  position: relative;
+}
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -543,4 +546,5 @@ footer {
   #projects .prev { left: 5px; }
   #projects .next { right: 5px; }
 }
+
 
