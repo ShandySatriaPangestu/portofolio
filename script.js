@@ -45,22 +45,23 @@ document.addEventListener("DOMContentLoaded", function () {
   slideProject(0);
 });
 //amplop
-window.addEventListener("load", () => {
-  const entrance = document.getElementById("entrance");
-  const envelope = document.getElementById("envelope");
+const entrance = document.getElementById('entrance');
+const openBtn = document.getElementById('openPortfolio');
 
-  envelope.addEventListener("click", () => {
-    entrance.classList.add("active"); // buka amplop
-
-    // hilangkan entrance setelah animasi selesai
-    setTimeout(() => {
-      entrance.style.opacity = "0";
-      entrance.style.transition = "opacity 0.8s ease";
-      setTimeout(() => {
-        entrance.remove(); // hapus dari DOM
-      }, 800);
-    }, 2000); // animasi selesai 2 detik
-  });
+openBtn.addEventListener('click', () => {
+  entrance.style.animation = 'fadeOut 0.6s ease forwards';
+  setTimeout(() => {
+    entrance.style.display = 'none';
+  }, 600);
 });
+
+/* tambahan animasi fade out */
+const styleSheet = document.styleSheets[0];
+styleSheet.insertRule(`
+@keyframes fadeOut {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}`, styleSheet.cssRules.length);
+
 
 
