@@ -243,6 +243,7 @@ nav a:hover::after {
 .skill-group {
   display: flex;
   flex-direction: column;
+  gap: 30px; /* <- jarak antar card dalam group */
 }
 
 .skill-group h3 {
@@ -469,3 +470,4 @@ footer {
   .hero-img, .background-center img { width: 100%; max-width: 650px; }
   .skills-grid, .project-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
+
