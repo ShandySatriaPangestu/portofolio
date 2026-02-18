@@ -15,7 +15,7 @@ body {
   overflow-x: hidden;
 }
 /* ================================================= */
-/* ENVELOPE ENTRANCE LUXURY */
+/* ENVELOPE ENTRANCE - LUXURY REALISTIC */
 /* ================================================= */
 #envelope-wrapper {
   position: fixed;
@@ -25,24 +25,24 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 200;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.85);
 }
 
 #envelope {
   position: relative;
-  width: 200px;
-  height: 120px;
-  perspective: 800px; /* untuk animasi 3D flap */
+  width: 220px;
+  height: 140px;
+  perspective: 1000px;
   cursor: pointer;
 }
 
 #envelope .body {
   width: 100%;
   height: 100%;
-  background: linear-gradient(145deg, #fff8e1, #ffd700);
+  background: linear-gradient(145deg, #fff8e1, #fbe26c);
   border: 2px solid #e6c200;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
   position: relative;
   z-index: 1;
 }
@@ -53,19 +53,19 @@ body {
   left: 0;
   width: 100%;
   height: 50%;
-  background: linear-gradient(145deg, #fff8e1, #ffe066);
+  background: linear-gradient(145deg, #fff9d1, #ffd700);
   border-bottom: 2px solid #e6c200;
-  border-radius: 8px 8px 0 0;
+  border-radius: 10px 10px 0 0;
   transform-origin: top;
   transform: rotateX(0deg);
   z-index: 2;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
-  transition: transform 0.8s cubic-bezier(0.65, 0.05, 0.36, 1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  transition: transform 1s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 #open-envelope-btn {
-  margin-top: 30px;
-  padding: 12px 28px;
+  margin-top: 35px;
+  padding: 14px 32px;
   border-radius: 30px;
   border: none;
   background: linear-gradient(90deg, #ffd700, #e6c200);
@@ -73,9 +73,10 @@ body {
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
-  box-shadow: 0 8px 25px rgba(255,215,0,0.4);
+  font-size: 16px;
+  box-shadow: 0 10px 28px rgba(255,215,0,0.45);
   transition: all 0.3s ease;
 }
 
@@ -88,6 +89,7 @@ body {
 #envelope.open .flap {
   transform: rotateX(-180deg);
 }
+
 
 
 
@@ -590,6 +592,7 @@ footer {
   .hero-img, .background-center img { width: 100%; max-width: 650px; }
   .skills-grid, .project-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
+
 
 
 
