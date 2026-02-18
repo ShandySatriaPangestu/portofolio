@@ -231,6 +231,7 @@ nav a:hover::after {
 /* ================================================= */
 .skills-section {
   padding: 0 20px;
+  align-items: center;
 }
 
 .skills-grid {
@@ -470,4 +471,5 @@ footer {
   .hero-img, .background-center img { width: 100%; max-width: 650px; }
   .skills-grid, .project-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
+
 
