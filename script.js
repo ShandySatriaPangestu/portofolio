@@ -44,5 +44,23 @@ function slideProject(n) {
 document.addEventListener("DOMContentLoaded", function () {
   slideProject(0);
 });
+//amplop
+window.addEventListener("load", () => {
+  const entrance = document.getElementById("entrance");
+  const envelope = document.getElementById("envelope");
+
+  envelope.addEventListener("click", () => {
+    entrance.classList.add("active"); // buka amplop
+
+    // hilangkan entrance setelah animasi selesai
+    setTimeout(() => {
+      entrance.style.opacity = "0";
+      entrance.style.transition = "opacity 0.8s ease";
+      setTimeout(() => {
+        entrance.remove(); // hapus dari DOM
+      }, 800);
+    }, 2000); // animasi selesai 2 detik
+  });
+});
 
 
