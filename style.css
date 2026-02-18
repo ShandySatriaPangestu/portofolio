@@ -338,14 +338,15 @@ nav a:hover::after {
   padding: 60px 60px;
 }
 
-@media (max-width: 1024px) and (min-width: 768px).skills-grid {
+@media (max-width: 1024px) and (min-width: 768px) {
+  .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Core & Soft Skills berdampingan */
   gap: 80px; /* jarak antar group */
   justify-content: center; /* supaya tidak menempel ke tepi */
   margin-top: 40px;
 }
-
+}
 .skill-group {
    display: flex;
   flex-direction: column;
@@ -592,6 +593,7 @@ footer {
   .hero-img, .background-center img { width: 100%; max-width: 650px; }
   .skills-grid, .project-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
+
 
 
 
