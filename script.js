@@ -47,8 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
 //amplop
 const envelope = document.getElementById("envelope");
 const btn = document.getElementById("open-envelope-btn");
-const wrapper = document.getElementById("envelope-wrapper");
-const mainContent = document.getElementById("wrapper"); // main portofolio
+const wrapper = document.getElementById("wrapper"); // main portofolio
+const envelopeWrapper = document.getElementById("envelope-wrapper");
+
+// awal: sembunyikan main content
+wrapper.style.display = "none";
 
 btn.addEventListener("click", () => {
   envelope.classList.add("open");
@@ -56,16 +59,16 @@ btn.addEventListener("click", () => {
   // tunggu animasi flap selesai sebelum tampilkan portofolio
   setTimeout(() => {
     wrapper.style.display = "block";  // tampilkan main content
-    wrapper.scrollTo(0,0);
-    wrapper.style.opacity = 1;
+    wrapper.style.opacity = 0;
     wrapper.style.transition = "opacity 1s ease";
-    wrapper.style.zIndex = 1;
-    wrapper.style.position = "relative";
+    setTimeout(() => wrapper.style.opacity = 1, 50);
 
     // sembunyikan envelope
-    wrapper.previousElementSibling.style.display = "none";
-  }, 800);
+    envelopeWrapper.style.display = "none";
+  }, 1000); // sama dengan durasi animasi flap
 });
+
+
 
 
 
