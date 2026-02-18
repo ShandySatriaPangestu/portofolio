@@ -372,28 +372,47 @@ nav a:hover::after {
 /* ================================================= */
 /* PROJECT NAV BUTTONS (Prev / Next) */
 /* ================================================= */
-.project-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
+.project-slider-wrapper {
+  position: relative;
+  width: 100%;
 }
 
-.project-nav button {
+.project-slider-wrapper .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  overflow: hidden;
+}
+
+.project-slider-wrapper .project-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
   background: linear-gradient(90deg, #ffd700, #e6c200);
   border: none;
-  padding: 12px 25px;
-  border-radius: 25px;
+  padding: 12px 20px;
+  border-radius: 50%;
   color: #0a0a0a;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
   box-shadow: 0 8px 20px rgba(255,215,0,0.4);
+  transition: all 0.3s ease;
 }
 
-.project-nav button:hover {
+.project-slider-wrapper .project-nav:hover {
   background: linear-gradient(90deg, #e6c200, #ffd700);
-  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-50%) scale(1.1);
 }
+
+.project-slider-wrapper .project-nav.prev {
+  left: -20px; /* jarak dari kiri slider */
+}
+
+.project-slider-wrapper .project-nav.next {
+  right: -20px; /* jarak dari kanan slider */
+}
+
 
 /* ================================================= */
 /* CONTACT SECTION */
@@ -471,5 +490,6 @@ footer {
   .hero-img, .background-center img { width: 100%; max-width: 650px; }
   .skills-grid, .project-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
+
 
 
