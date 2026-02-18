@@ -338,7 +338,7 @@ nav a:hover::after {
   padding: 60px 60px;
 }
 
-.skills-grid {
+@media (max-width: 1024px) and (min-width: 768px).skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Core & Soft Skills berdampingan */
   gap: 80px; /* jarak antar group */
@@ -435,7 +435,8 @@ nav a:hover::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
-  width: 100%;
+  max-width: 1000px;
+  margin: 60px auto 0 auto;
   margin-top: 60px;
 }
 
@@ -501,15 +502,14 @@ nav a:hover::after {
   box-shadow: 0 8px 20px rgba(255,215,0,0.4);
   transition: all 0.3s ease;
 }
-
+@media (max-width: 1024px){
 .project-slider-wrapper .project-nav.prev {
-  left: -60px; /* tarik keluar dari container */
+  left: -30px; /* tarik keluar dari container */
 }
-
 .project-slider-wrapper .project-nav.next {
-  right: -60px; /* tarik keluar dari container */
+  right: -30px; /* tarik keluar dari container */
 }
-
+}
 .project-slider-wrapper .project-nav:hover {
   background: linear-gradient(90deg, #e6c200, #ffd700);
   transform: translateY(-50%) scale(1.1);
@@ -592,6 +592,7 @@ footer {
   .hero-img, .background-center img { width: 100%; max-width: 650px; }
   .skills-grid, .project-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
+
 
 
 
