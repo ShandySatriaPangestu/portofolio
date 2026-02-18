@@ -16,32 +16,57 @@ body {
 }
 
 /* ================================================= */
-/* BACKGROUND VIDEO & OVERLAY */
+/* BACKGROUND VIDEO & OVERLAY - FINAL VERSION */
 /* ================================================= */
 .video-container {
-  position: fixed;
-  inset: 0;
-  z-index: -3;
+  position: fixed;       /* selalu menempel di layar */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;      /* mencegah video keluar container */
+  z-index: -3;           /* di belakang semua konten */
 }
 
 .bg-video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;     /* menutupi seluruh container tanpa merusak rasio */
+  object-position: center;
   display: block;
-  opacity: 0.35;
+  opacity: 0.35;         /* transparansi agar teks terbaca */
+  pointer-events: none;  /* video tidak bisa diklik */
 }
 
 .overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(0,0,0,0.6),
-    rgba(0,0,0,0.95)
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.95)
   );
-  z-index: -2;
+  z-index: -2;           /* di atas video, di bawah konten */
+  pointer-events: none;
 }
+
+/* RESPONSIVE ADJUSTMENT */
+@media (max-width: 768px) {
+  .bg-video {
+    object-position: top center; /* supaya area penting terlihat di HP */
+  }
+  .overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.85)
+    );
+  }
+}
+
 
 /* ================================================= */
 /* HEADER / NAVBAR */
@@ -489,6 +514,7 @@ footer {
   .hero-img, .background-center img { width: 100%; max-width: 650px; }
   .skills-grid, .project-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
+
 
 
 
