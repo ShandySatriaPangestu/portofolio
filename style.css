@@ -15,61 +15,80 @@ body {
   overflow-x: hidden;
 }
 /* ================================================= */
-/* ENTRANCE / AMPLP / OPEN BUTTON */
+/* ENVELOPE ENTRANCE LUXURY */
 /* ================================================= */
-.entrance {
+#envelope-wrapper {
   position: fixed;
   inset: 0;
-  background: #0a0a0a; /* sama dengan background portofolio */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  text-align: center;
+  z-index: 200;
+  background: rgba(0,0,0,0.75);
 }
 
-.envelope-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  animation: entranceFadeIn 1s ease forwards;
+#envelope {
+  position: relative;
+  width: 200px;
+  height: 120px;
+  perspective: 800px; /* untuk animasi 3D flap */
+  cursor: pointer;
 }
 
-.envelope-icon {
-  color: #ffd700; /* emas konsisten portofolio */
-  animation: bounce 1.2s infinite;
+#envelope .body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #fff8e1, #ffd700);
+  border: 2px solid #e6c200;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  position: relative;
+  z-index: 1;
 }
 
-#openPortfolio {
-  padding: 14px 40px;
-  font-size: 18px;
+#envelope .flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(145deg, #fff8e1, #ffe066);
+  border-bottom: 2px solid #e6c200;
+  border-radius: 8px 8px 0 0;
+  transform-origin: top;
+  transform: rotateX(0deg);
+  z-index: 2;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  transition: transform 0.8s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+#open-envelope-btn {
+  margin-top: 30px;
+  padding: 12px 28px;
   border-radius: 30px;
+  border: none;
   background: linear-gradient(90deg, #ffd700, #e6c200);
   color: #0a0a0a;
-  border: none;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(255,215,0,0.4);
+  box-shadow: 0 8px 25px rgba(255,215,0,0.4);
   transition: all 0.3s ease;
 }
 
-#openPortfolio:hover {
-  background: linear-gradient(90deg, #e6c200, #ffd700);
+#open-envelope-btn:hover {
   transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(90deg, #e6c200, #ffd700);
 }
 
-/* ANIMATIONS */
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+/* Flap terbuka */
+#envelope.open .flap {
+  transform: rotateX(-180deg);
 }
 
-@keyframes entranceFadeIn {
-  0% { opacity: 0; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1); }
-}
 
 
 /* ================================================= */
@@ -571,6 +590,7 @@ footer {
   .hero-img, .background-center img { width: 100%; max-width: 650px; }
   .skills-grid, .project-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
+
 
 
 
