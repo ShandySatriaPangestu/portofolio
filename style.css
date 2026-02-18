@@ -230,21 +230,23 @@ nav a:hover::after {
 /* SKILLS SECTION */
 /* ================================================= */
 .skills-section {
-  padding: 0 20px;
-  align-items: center;
+  display: flex;
+  justify-content: center; /* center skill groups horizontally */
+  padding: 80px 40px;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Core & Soft Skills berdampingan */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 60px;
-  margin-top: 60px;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .skill-group {
-  display: flex;
+   display: flex;
   flex-direction: column;
-  gap: 30px; /* <- jarak antar card dalam group */
+  align-items: center; /* center cards inside group */
 }
 
 .skill-group h3 {
@@ -257,9 +259,10 @@ nav a:hover::after {
 }
 
 .skill-cards {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 
 .skill-card {
@@ -375,6 +378,7 @@ nav a:hover::after {
 .project-slider-wrapper {
   position: relative;
   width: 100%;
+  padding: 40px 0;
 }
 
 .project-slider-wrapper .project-grid {
@@ -490,6 +494,7 @@ footer {
   .hero-img, .background-center img { width: 100%; max-width: 650px; }
   .skills-grid, .project-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
+
 
 
 
