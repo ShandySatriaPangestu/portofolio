@@ -232,13 +232,13 @@ nav a:hover::after {
 .skills-section {
   display: flex;
   justify-content: center; /* center skill groups horizontally */
-  padding: 80px 40px;
+  padding: 60px 60px;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Core & Soft Skills berdampingan */
-  gap: 60px; /* jarak antar group */
+  gap: 80px; /* jarak antar group */
   justify-content: center; /* supaya tidak menempel ke tepi */
   margin-top: 40px;
 }
@@ -247,6 +247,7 @@ nav a:hover::after {
    display: flex;
   flex-direction: column;
   align-items: center; /* center cards inside group */
+  gap: 30px; /* jarak antar skill-card di dalam group */
 }
 
 .skill-group h3 {
@@ -378,14 +379,8 @@ nav a:hover::after {
 .project-slider-wrapper {
   position: relative;
   width: 100%;
-  padding: 40px 0;
-}
-
-.project-slider-wrapper .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .project-slider-wrapper .project-nav {
@@ -395,7 +390,7 @@ nav a:hover::after {
   z-index: 10;
   background: linear-gradient(90deg, #ffd700, #e6c200);
   border: none;
-  padding: 12px 20px;
+  padding: 15px 20px;
   border-radius: 50%;
   color: #0a0a0a;
   font-weight: 700;
@@ -404,17 +399,17 @@ nav a:hover::after {
   transition: all 0.3s ease;
 }
 
-.project-slider-wrapper .project-nav:hover {
-  background: linear-gradient(90deg, #e6c200, #ffd700);
-  transform: translateY(-50%) scale(1.1);
-}
-
 .project-slider-wrapper .project-nav.prev {
-  left: -10px; /* jarak dari kiri slider */
+  left: -60px; /* tarik keluar dari container */
 }
 
 .project-slider-wrapper .project-nav.next {
-  right: -10px; /* jarak dari kanan slider */
+  right: -60px; /* tarik keluar dari container */
+}
+
+.project-slider-wrapper .project-nav:hover {
+  background: linear-gradient(90deg, #e6c200, #ffd700);
+  transform: translateY(-50%) scale(1.1);
 }
 
 
@@ -494,6 +489,7 @@ footer {
   .hero-img, .background-center img { width: 100%; max-width: 650px; }
   .skills-grid, .project-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
+
 
 
 
